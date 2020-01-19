@@ -135,7 +135,7 @@ if __name__ == "__main__":
 
 根据TIOBE 2020年1月份的摘要显示，每个人都认为Python将连续第二年成为TIOBE的年度编程语言。但这一次却是C语言凭借2.4％的年增长率获得了该奖项。为什么C语言仍然很热门？这种趋势背后的主要驱动力是物联网（IoT）和当今发布的大量小型智能设备。当将C应用于对性能至关重要的小型设备时，C会很出色；并且C相对来说还算容易学习，每个处理器都有一个C编译器。以下是目前TIOBE编程社区索引指数对比图。
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118155039173.png
+![image-20200118155039173](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118155039173.png)
 
 此外，比起趋势图，用表格展示或许更直观一些，且看：
 
@@ -181,7 +181,7 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 2. 窗口中显示的内容中，前几行描述了操作系统的版本信息和版权信息等
 3. 最后一行的内容，默认是你的用户文件夹位置
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118201415719.png
+![image-20200118201415719](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118201415719.png)
 
 这里值得注意的是：
 
@@ -189,7 +189,7 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 2. 这个默认的profile文件夹位置，我们一般不对它做修改，因为与你的用户文件夹初始化有关
 3. 但CMD打开后，默认显示的位置我们是可以考虑对它做些修改的，为什么呢？因为目前它打开的是我的profile文件夹，如果我在这个黑窗里直接创建一个python程序，那么这个python程序就会和这个文件夹下的内容混在一起了，比如，我们复制该路径，在```运行窗口```中输入后回车便得到一个资源管理器窗口：
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118202203742.png
+![image-20200118202203742](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118202203742.png)
 
 这个文件夹窗口也有几点值得注意：
 
@@ -205,7 +205,7 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 1. 方法一：在cmd中输入```set```即可看到环境变量的情况
 2. 方法二：在资源管理器 - 右击计算机 - 选择属性 - 选择高级系统设置 - 选择环境变量，便能看到上方用户环境变量和下方系统环境变量的情况
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118205432179.png
+![image-20200118205432179](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118205432179.png)
 
 在上图中，可以看到cmd显示的一些数据和右方的界面展示的数据大致是一一对应的，不过cmd中给出的环境变量比比右边界面给出的多，比如cmd的第一个变量叫```ALLUSERPROFILE```在右边就没有出现（不过没出现的一般我们都不用考虑）；然后左边和右边第一个共有的变量叫```CLASSPATH```，这个我们也不用关心；第三个我标红的变量是```HOMEPATH```，这其实是我们后续要安装的Anaconda软件默认的一个主页路径；而```JAVA_HOME```就是要运行JAVA的主页路径（本教程不考虑）。
 
@@ -236,7 +236,7 @@ C:
 
 聪明的你应该能意识到了，既然```NC```可以转换成其实际含义，那么```PATH```也应该可以，于是就有下图。
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118211816569.png
+![image-20200118211816569](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118211816569.png)
 
 可以看到，确实如此，当我们使用```echo %PATH%```之后，它确实显示出了密密麻麻的一堆路径，每条路径都是分号结尾的，注意这个约定，在大多数编程语言中，分号都代表着一句话的终结，比如Python、C语言等。
 
@@ -248,7 +248,7 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 
 然后我们就可以测试以下语句，即直接输入```hello.bat```，甚至在任意文件夹路径下输入```hello.bat```都能得到同样的结果（红色是手动输入的，蓝色是自动输出的结果，右边的cmd是新打开的一个）。
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118215049495.png
+![image-20200118215049495](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118215049495.png)
 
 原因是因为```hello.bat```是在```C:\Users\WZ988KR\AppData\Local\GitHubDesktop\bin```这个文件夹下的（不信可以打开资源管理器看看），然后这个```bin```的路径又在系统的```PATH```变量中，当windows要执行一个没有绝对路径的前缀的程序时，它会依次遍历所有系统环境路径下的文件夹下的可执行文件，主要包括```.exe```文件和```.bat```文件。
 
@@ -258,23 +258,23 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 2. 你的```hello.bat```文件不在系统环境路径下，比如你只是在桌面新建了一个```hello.bat```文件，但是你的桌面路径并不在系统路径里（当然你可以把你的桌面加入路径，那样就可以正常地、在任何文件夹下运行```hello```了）
 3. 你的```hello.bat```文件在系统环境路径内，但是有多个，你可能想执行的是第二个```hello```程序，但是却因为路径的先后关系执行了第一个，于是引起了意外的、令人困惑的结果，还很不容易察觉
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118215606799.png
+![image-20200118215606799](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118215606799.png)
 
 前两种应该讲的比较清楚了，但针对第三种，有必要展开一下，因为第三种情况是很有可能在实际种发生的。比如，你先在官网下载了一个纯净版Python，并加入了环境路径。之后又下载了Ananconda，并且也把它加入了环境路径，这样问题就来了，当你在cmd中直接输入```python```，它会运行哪个呢？比如如下的环境路径情况。
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118220928820.png
+![image-20200118220928820](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118220928820.png)
 
 
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221016631.png
+![image-20200118221016631](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221016631.png)
 
 
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221102719.png
+![image-20200118221102719](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221102719.png)
 
 可以看到，确实在两个不同的路径下分别有一个```python.exe```程序，根据环境路径的顺序，由于Ananconda在前，所以会运行Anaconda环境下的```python.exe```。我们可以通过```where python```这个命令去验证一下。
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221449407.png
+![image-20200118221449407](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118221449407.png)
 
 如果你的电脑上安装了某个程序的多个版本，那最好的办法是给它们重新命名，比如把```Python37```文件夹下的```python.exe```重命名为```python37.exe```，这样你输入```pyhton37```就可以运行该程序，而你输入```python```则会运行Anaconda环境下的```python.exe```程序。这也是在一个电脑里同时安装```python2```和```python3```的解决方案，不过好消息（同时更是坏消息）是，今年（2020年）1月1日```python2```已经停止维护了。
 
@@ -290,7 +290,7 @@ http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/image-20200118
 
 #### 图灵Python图书一览表
 
-http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/20180409200251453.png
+![img](http://q45kgq2g9.bkt.clouddn.com/CH01_TheVeryIntroToPython.assets/20180409200251453.png)
 
 #### 参考网址
 

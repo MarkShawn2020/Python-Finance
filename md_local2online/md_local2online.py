@@ -1,7 +1,7 @@
 
 import os
 import re
-from urllib.parse import unquote
+from urllib.parse import unquote, quote
 
 from qiniu import Auth, put_file
 
@@ -62,12 +62,17 @@ def get_online_img_path(img_abs_path, md_file_path):
         return online_img_path
 
 
-def md_imgs_convert2online(md_file_path: str, replace: bool):
+def md_imgs_convert2online(md_file_path: str, replace: bool, img_dir_path:str):
     print("Open md content from {}".format(md_file_path))
     with open(md_file_path, "r", encoding="utf-8") as f:
         md_str = f.read()
     print("Converting img hrefs in the md file...")
-    md_str_converted = re.sub(r'!\[.*?\]\((.*?)\)', lambda x: get_online_img_path(x.group(1), md_file_path), md_str)
+
+    img_href_prefix = quote(img_dir_path).replace("%B2", "+")
+    img_href_to_match = r'(?<=\()%s/.*?(?=\))' % img_href_prefix
+    print("img_href_to_match: " + img_href_to_match)
+    md_str_converted = re.sub(img_href_to_match,
+                              lambda x: get_online_img_path(x.group(0), md_file_path), md_str)
 
     if replace:
         md_file_path_new = md_file_path
