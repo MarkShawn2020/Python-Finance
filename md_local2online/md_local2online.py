@@ -1,6 +1,4 @@
 
-from settings import AK, SK, DOMAIN, BUCKET_NAME
-
 import os
 import re
 from urllib.parse import unquote
@@ -9,7 +7,7 @@ from qiniu import Auth, put_file
 
 
 """
-1. 打开.md文件
+1. 打开.md文件（由于Github无法识别断开的链接，因此文件名不要断开的好）
 2. 替换.md文件中所有的图片链接
     1. 匹配出.md文件中的路径，一般就是relative_source_dir_path + file_name
         1. 如果是本地的话，直接open打开即可（比如Typora）
@@ -75,7 +73,7 @@ def md_imgs_convert2online(md_file_path: str, replace: bool):
         md_file_path_new = md_file_path
     else:
         from datetime import datetime
-        md_file_path_new = md_file_path.replace(".md", "_{}.md".format(datetime.now().timestamp()))
+        md_file_path_new = md_file_path.replace(".md", "_{}.md".format(int(datetime.now().timestamp())))
     with open(md_file_path_new, 'w', encoding="utf-8") as f:
         f.write(md_str_converted)
         print("Re-write md content to {}".format(md_file_path_new))
