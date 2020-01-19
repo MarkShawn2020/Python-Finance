@@ -1,3 +1,18 @@
+## CH02_InstallAndConfigureIDE
+
+### Overview
+
+- 在Python官网可以下载到原生的Python安装包，里面只涵盖了最基本的几个Python库，可不下载；
+- 在Anaconda官网可以下载到Anaconda安装包，它预先配置好了包含Python库的200多个常用库，其中的Jupyter Notebook组件是后续数据分析的首选平台，另外一个Spyder组件也是一个界面非常友好的IDE；
+- 为了支持后续更大工程量的开发工作，我们还提供了PyCharm专业版的下载方式与基于教育邮箱的激活方式；
+- 为了使查看、编写代码的轻量级工作能够流畅运行，我们推荐使用Sublime Text 3这款软件。**
+
+
+
+### Install
+
+
+
 # CH01 - Python开发环境配置
 
 Python作为主流编程之一，要想学好python，就不得不把自己当作一个专业的程序员认真对待，正所谓“工欲善其事必先利其器”，准备好所有的利器，才能更好地帮助我们冲锋陷阵，完成使命。
@@ -9,7 +24,6 @@ Python作为主流编程之一，要想学好python，就不得不把自己当�
 ## Get to know Github and .md
 首先介绍Github，因为GitHub 是目前全球最大的开源代码库，以下是官网的截图：
 
-
 [![image.png](https://cdn.nlark.com/yuque/0/2020/png/633627/1579019855091-dacd701d-e7f0-4e72-8cc8-dee504abea77.png#align=left&display=inline&height=273&name=image.png&originHeight=407&originWidth=1113&size=42849&status=done&style=none&width=746)](https://github.com/about)
 
 
@@ -20,7 +34,7 @@ Python作为主流编程之一，要想学好python，就不得不把自己当�
 
 
 - [Typora — a markdown editor, markdown reader.](https://typora.io/)
-### 
+
 ## IDE的选择与配置
 我们推荐使用** ****Anaconda + PyCharm + Sublime**** **的组合学习Python，这能帮助你应对绝大多数情况下的开发问题，具有极强的扩展能力。当然，**Anaconda 下的Spyder可部分取代PyCharm，VSCode和Sublime也是互为替代品**（VSCode比Sublime更强大一些），感兴趣的朋友可自行了解使用。
 
@@ -90,10 +104,58 @@ P.F.A项目PyCharm2019专业版网盘（如失效请联系P.F.A.C）：
 
 
 
-## 附录
 
 
 
 
 
+
+### Configure
+
+### Test
+
+### Reading
+
+### Definition
+
+| 定义                         | 解释或说明                                                   |
+| ---------------------------- | ------------------------------------------------------------ |
+| 计算机                       |                                                              |
+| 操作系统                     | 主要分为Windows、Mac和Linux，其中Mac和Linux都是基于UNIX架构的 |
+| 系统调用                     |                                                              |
+| 命令行界面                   | Windows上主要是指cmd和PowerShell，Mac/Linux上主要指bash shell |
+| 编译器                       |                                                              |
+| 编程语言                     | 主要有C/C++、Java、Python、C#、JavaScript、Swift、Matlab、R等 |
+| C语言                        |                                                              |
+| C++语言                      |                                                              |
+| Java语言                     |                                                              |
+| Python语言                   |                                                              |
+| Python包                     |                                                              |
+| IDE                          | 集成开发环境                                                 |
+| 环境                    路径 | 分系统环境路径和用户环境路径，在用户状态下可以访问系统的环境信息，但在系统级别下无法访问某个具体用户的一些环境信息 |
+
+### Theoretical Problem: how does Python program work?
+
+### Practical Problem: programming using both CMD and GUI
+
+
+
+
+
+
+
+### Reference
+
+#### 参考网址
+
+- [Installing on macOS — Anaconda documentation](https://docs.anaconda.com/anaconda/install/mac-os/)
+- [Jupyter-contrib/jupyter_nbextensions_configurator: A jupyter notebook serverextension providing config interfaces for nbextensions.](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator#installation )
+- 
+
+#### Documentation
+
+- [Getting started with Anaconda — Anaconda documentation](https://docs.anaconda.com/anaconda/user-guide/getting-started/ )
+- [User guide — conda 4.8.1.post77+375945f4 documentation](https://conda.io/projects/conda/en/latest/user-guide/index.html )
+- [The Jupyter Notebook — Jupyter Notebook 6.0.2 documentation](https://jupyter-notebook.readthedocs.io/en/stable/ )
+- 
 

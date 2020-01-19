@@ -62,13 +62,15 @@ def get_online_img_path(img_abs_path, md_file_path):
         return online_img_path
 
 
-def md_imgs_convert2online(md_file_path: str, replace: bool, img_dir_path:str):
+def md_imgs_convert2online(md_file_path: str, replace: bool, img_dir:str = None):
     print("Open md content from {}".format(md_file_path))
     with open(md_file_path, "r", encoding="utf-8") as f:
         md_str = f.read()
     print("Converting img hrefs in the md file...")
 
-    img_href_prefix = quote(img_dir_path).replace("%B2", "+")
+    if not img_dir:
+        img_dir = md_file_path.replace("\\", "/").rsplit("/", 1)[-1].replace(".md", ".asset")
+    img_href_prefix = quote(img_dir).replace("%B2", "+")
     img_href_to_match = r'(?<=\()%s/.*?(?=\))' % img_href_prefix
     print("img_href_to_match: " + img_href_to_match)
     md_str_converted = re.sub(img_href_to_match,
