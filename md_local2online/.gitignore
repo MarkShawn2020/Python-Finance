@@ -1,6 +1,8 @@
-.idea/
+settings.py
 
 
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -108,7 +110,7 @@ celerybeat.pid
 .env
 .venv
 env/
-venv/
+../venv/
 ENV/
 env.bak/
 venv.bak/
@@ -130,4 +132,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-python37_venv/Include/
+
