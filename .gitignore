@@ -132,3 +132,6 @@ dmypy.json
 /md_local2online/.idea/
 
 .idea/
+/NC_P.F.A/.ipynb_checkpoints/
+
+test/.idea
