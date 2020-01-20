@@ -46,9 +46,3 @@
 | 邮箱 | shawninjuly@gmail.com |
 | 微信 | xing123jian123        |
 
-##### 私人账号
-|From|@                    |
-| -- | --                  |
-|邮箱|shawninjuly@gmail.com|
-|微信|xing123jian123       |
-
