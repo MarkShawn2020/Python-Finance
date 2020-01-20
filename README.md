@@ -32,15 +32,16 @@
 
 ### About Me
 
-##### 公众账号
+##### Public
 
-| 平台       | ID            |
+| FROM       | ID            |
 | ---------- | ------------- |
 | 微信公众号 | 南川笔记      |
 | 知乎专栏   | 南川P.F.A教程 |
 
-##### 私人账号
+##### Private
 
-邮箱：shawninjuly@gmail.com
-
-微信：xing123jian123
+| FROM | ID                    |
+| ---- | --------------------- |
+| 邮箱 | shawninjuly@gmail.com |
+| 微信 | xing123jian123        |
