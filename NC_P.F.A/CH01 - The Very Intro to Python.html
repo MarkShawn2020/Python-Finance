@@ -1,0 +1,686 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>CH01 - The Very Intro to Python</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  	font-size: 1.5rem;
+ 	top: 0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p>&nbsp;</p><h2><a name="ch01---the-very-intro-to-python" class="md-header-anchor"></a><span>CH01 - The Very Intro to Python</span></h2><h3><a name="overview" class="md-header-anchor"></a><span>Overview</span></h3><p><span>本章节主要讲解Python的一些发展与洞见，以提供读者对Python多方位、立体化的认知，并指导搭建好综合的程序开发环境，为后续的学习、生产建立基础。</span></p><p><span>本章核心：</span></p><ul><li><span>Python分Python2和Python3，Python2诞生于1991年，其开发者为Gudio，并于2020年1月1日官方宣布停止维护，因此接下来所有的Python项目都是Python3版本；</span></li><li><span>Python在近20年内的地位与热度一直在上升，得益于大数据处理相关的优势，目前跻进前五，与Java、C/C++同在一线阵营；</span></li><li><span>Python的应用方向广泛，目前主要用于网站开发、网络爬虫、数据可视化、机器学习和自动化运维；</span></li><li><span>要想顺利安装好Python的各大IDE（集成开发环境），需要对操作系统的环境变量有一定的了解；</span></li></ul><h3><a name="whats-python-and-whats-python-for" class="md-header-anchor"></a><span>What&#39;s python and what&#39;s python for?</span></h3><h4><a name="为什么要学python" class="md-header-anchor"></a><span>为什么要学Python？</span></h4><p><span>我们先把这个问题放在首位，这个问题其实很重要，因为这并不不偶然。</span></p><p><span>有人会说：“因为大家都在学Python，所以我不能落下”，这或许可以称之为一个理由。</span></p><p><span>但你真地明白大家为啥要学Python吗？或者，你去问问那些学的比较深入的人，他真地喜欢Python吗？我觉得，在你学习Python之前，如果可以，问一下那些人：“嘿，老哥，你为啥学Python？学习Python给你生活带来了什么改变吗？”作为一门编程语言，按照直觉，这应该不会有什么令人出乎意料的答案。比如你可能听到：“啊，学习Python啊，我感觉它很容易学“，或者”谁知道呢，也许可以用Python可以减轻我的工作负担吧”。</span></p><p><span>这些答案都是可以接受的，但如果你问我，我会回答：“我可以用Python完成非常多原本不可能完成的任务；在学习过程中，我更懂计算机了；我从未感觉学习一门编程语言能像Python一样如此富有魅力，以至于更像是一种享受，以至于我现在全身心地投入到了Python的推广教学当中去了，以至于我必须把Python的首字母大写以表示这是Python而非其他种python”。</span></p><p><strong><em><span>&quot;Easy, Powerful, Prevailing and then Enjoyable, Beautiful, Philosophical&quot;</span></em></strong><span>，这就是我为什么要学Python的答案：</span></p><ol start='' ><li><span>因为简单，所以我很快地掌握了它的使用</span></li><li><span>因为有用，所以我很快地做出了一些东西</span></li><li><span>因为流行，所以我很快地找到了一些工作</span></li><li><span>并且它是美丽而富有哲学意味的，由此开发Python的体验是令人享受的</span></li><li><span>最后，它在一定程度上改变了我的生活，改变了我的职业规划，并带给了我一种新的审视世界的角度</span></li></ol><p><span>感性到此结束，我们来看看这三个要素究竟是怎么把我引向学习Python的热潮中去的：</span></p><ul><li><span>C、C++、JAVA等语言非常Powerful并且Prevailing，但是它们并不easy，比如C中的指针让人望而生畏，知乎的轮子哥曾经专门教一个人C语言，安排一周讲解所有基本概念，但却安排了两周给他讲授指针，可想而知</span></li><li><span>Matlab、R、JavaScript等语言并不那么难，但都只是特定领域的专用语言，如果你要走学术那你可要好好学学matlab或R等，如果你要做前端可要好好学习JavaScript等，总之它们都不适用于所有人，当然类似的还有一些大数据时代专用的语言比如Go、Scala等也可归于这一类</span></li><li><span>再举个不是很流行的例子，比如lua之类的语言</span></li><li><span>但有一种算不上编程语言的语言，我必须突出一下，那就是Markdown，它是一种标记语言，广泛地用于互联网的博客写作与Github项目的首页展示，比如本系列教程就是完全基于Markdown的。By the way，我的英文名就叫Mark</span></li><li><span>因此，当你不知道要学哪门编程语言以应对未来就业市场的冲击的时候，选Python准没错；如果你知道自己要学哪门编程语言，又正好读到我们这份教程，那我想说：“加油，请坚定地走下去”。此时或许可以再来波鸡汤：“未来你一定会感谢现在如此明智而又努力的你的！”</span></li></ul><h4><a name="python到底是什么" class="md-header-anchor"></a><span>Python到底是什么？</span></h4><p><span>在写这份系列教程之前，我有承诺给我的读者，要在书中体现程序员的思维，Now，这是第一个：</span><strong><span>证伪往往比证明更容易</span></strong><span>。即我无法准确定义Python是什么，但可以准确地回答一个伪命题，比如：“Python是最好的编程语言？”这显然是不成立的，毕竟Python的平均运行效率在Java的十分之一左右，在C的百分之一左右。</span></p><blockquote><p><span>以下内容是关于软件测试的，暂时可以不用理解</span></p></blockquote><p><span>我们可以再深入一些，什么是证伪比证明更容易，我们可以借用软件工程中单元测试的概念来试图说明这一点。比如你写了一个验证用户输入的手机号码是否合法的程序，作为用户如果他不信任你的程序的话，他会怎么测试你的程序呢？他可以先输入一个空值，看看会不会报错；如果会，再输入一个字符串看看会不会；如果依旧会报错，再输入一个负数看看会不会报错；如果还是会，再输入一个小数看看会不会报错；如果仍然会报错，再输入一个十位数号码看看会不会报错……</span></p><p><span>严格意义上，到上一步，测试已经结束了，如果所有的以上都报错，然后用户输入了一个11位正整数提示通过，那么你的程序就已经合格了。所以你看前面的所有步骤都是在证伪，是一步步去伪存真，最后才能能够勉强证明你的程序是合格的。为啥这还只能算合格？因为你还没考虑首字为0的情况，以及没有考虑该电话号码是否符合其他更鲜为人知的中国电话号码规范，furthermore，我们还没讨论该程序对国外电话号码的检验与适用情况。所以你看，证明一个程序是正确的，或者说robust（稳健的），是多么地不容易。这便是我要花这么长的篇幅拒绝一上来就回答Python是什么的原因。</span></p><p><span>此外，我们还有第二个程序员思维：</span><strong><span>封装是一把双刃剑</span></strong><span>。同样是这个测试手机号码输入合法的程序，一些对Python了解较为深入的同学会嘲笑到，直接用正则表达式匹配11个数字不就解决了初步的校验问题了吗？没错，是这样的。正则表达式就是对一些字符串处理逻辑、模式的封装，并对上层提供一个更加简单、容易理解、容易调用的接口，以使上层的开发人员能够用更少的代码完成更强大、更复杂的逻辑处理。但这是一把双刃剑，因为封装让所有的一切变得更加抽象，让你无法理解你的错误，为啥会这样呢？什么又是封装呢？为了更好地理解这一点，我们再选取一个通俗易懂的例子：金融危机。</span></p><blockquote><p><span>以下内容是关于软件调试的，个人觉得这个例子还可以，建议理解</span></p></blockquote><p><span>对于程序员来说，整个世界的金融体系就是一个庞大的系统工程，它是由无数的政客、商人、普通人等，以及一整套货币体系、商品流动等构成的。当我不是一个金融研究者的时候，整个金融体系对于我来说就是一个封装地很完整的工程，我并不了解其金融的运转细节，但当我要去取钱的时候，我知道我要做的就是我去这个金融体系里的所有银行中的我可以取钱的那家银行取钱。用程序的逻辑描述就是：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">金融体系</span>.<span class="cm-property">所有银行</span>.<span class="cm-property">返回我开户的那家银行</span>().<span class="cm-property">返回这家银行旗下离我最近的网点</span>().<span class="cm-property">前往取钱</span>(<span class="cm-variable">取钱金额</span>=<span class="cm-error">?</span>, <span class="cm-variable">其他参数</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 42px;"></div><div class="CodeMirror-gutters" style="display: none; height: 42px;"></div></div></div></pre><p><span>是吧，其实就是这个意思，这个世界的封装让世界变得有序，让做某件事情的逻辑变得很清晰，但一旦哪里出了问题，由于你不知道每一步的逻辑是怎样的，也不知道有没有隐藏的bug，因此出了问题就会很棘手。比如就这个取钱的函数，你因为下雨没取到钱，这是一件很严重的事情，因为你会想不应该啊，这个金融体系应该能够支持我即使下雨天也能取到钱的，毕竟也没让我输入是否下雨这个参数啊，也就是说下雨不应该成为最终能不能取到钱的影响因素。但为啥最后没取到呢？</span></p><p><span>你最后仔细检查了一下程序逻辑，才发现，在这个</span><code>前往取钱(取钱金额=?, 其他参数)</code><span>的函数里虽然有考虑在下雨天的时候带伞以能够前往网点的函数调用，但这个调用没考虑你下雨天因为不小心滑倒摔伤被送进医院从而导致这个调用无法正常返回一个</span><code>已经抵达网点</code><span>的较低层输入，最后自然就没取取到钱，甚至会直接报错。你这么去想的话，就能明白为啥金融危机的争论这么久了，因为整套ABS体系过于复杂让人蒙圈，但比ABS更复杂的是整个世界的国际霸权体系，而比这个更复杂的是，根植在这个世界下的人性的复杂，这导致了推演、排查整个金融危机的原因，并优化这个金融体系的工作变得相当困难。甚至直到现在，我们都不能确定这个金融体系能像1+1保证等于2一样稳定的运转，这便是封装带来的不利之处。</span></p><p><span>而Python正是基于C语言之上封装起来的更高级的编程语言，它的easy正是来自于对很多c语言较为直观的逻辑的复杂的组合、包装与简化。</span></p><blockquote><p><span>以下内容是关于软件编码的，暂时可以不用理解</span></p></blockquote><p><span>但直到现在，我都无法给出Python是什么，虽然你可以在维基百科、百度百科、Python官网、</span><a href='https://en.wikipedia.org/wiki/Guido_van_Rossum'><span>Guido van Rossum</span></a><span>（Python创始人）口中得到无数种定义。相比于在这些囿于世俗、教科书般死板的解释，我更愿意简单地称Pyhton就是一门</span><strong><em><span>Easy, Powerful, Prevailing</span></em></strong><span>的语言，比如以下。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="py"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="py"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&gt;&gt;&gt; 1+1</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">2</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 42px;"></div><div class="CodeMirror-gutters" style="display: none; height: 42px;"></div></div></div></pre><p><span>好吧，不开玩笑，我们用直观的例子，解释什么是Python。你打开你的计算机，在没有开机的时候它就只是一个硬件，是没有任何灵魂可言的。现在你开机了，随着屏幕的不断闪烁，你进入了你习以为常的欢迎界面，这就是构建在计算机底层芯片、内存、主板之上的操作系统，可能是Windows，可能是Mac，也可能是Linux等。接着，你终于进入了你的桌面，然后打开了你的某个开发Python程序的软件，可能是PyCharm，可能是Jupyter Notebook，可能是IDLE，也可能是Sublime，甚至可能就是一个记事本，然后输入了一些读起来很像英文诗的语句：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="py" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="py"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># 本代码可直接运行，但本代码纯属娱乐，欢迎交流</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">from datetime import date</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">class Person:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>def love_or_not(self, the_guy, the_time):</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>"""</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>To love or not to love, that's a question.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>"""</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>return True</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">if __name__ == "__main__":</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  she = Person()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  me = Person()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if she.love_or_not(the_guy=me, the_time=date.today()):</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  print("I should be a better man!")</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  else:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  print("Please give me a cigar!")</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  print("After all, tomorrow is another day!")</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 446px;"></div><div class="CodeMirror-gutters" style="display: none; height: 446px;"></div></div></div></pre><p><span>这段代码如此简单明白，因为它正是Pythonic（极具Python风格）的代码，并且确实可以，理论上来说，这就是Python，这些就是Python想表达且能实现的东西。</span></p><p><span>作为对Python的尊敬，我们还是提供一份维基百科的解释如下：</span></p><blockquote><p><strong><span>Python</span></strong><span>（英国发音：</span><a href='https://zh.wikipedia.org/wiki/Wikipedia:國際音標英語發音'><span>/ˈpaɪθən/</span></a><span> 美国发音：</span><a href='https://zh.wikipedia.org/wiki/Wikipedia:國際音標英語發音'><span>/ˈpaɪθɑːn/</span></a><span>）是一种广泛使用的</span><a href='https://zh.wikipedia.org/wiki/直譯語言'><span>解释型</span></a><span>、</span><a href='https://zh.wikipedia.org/wiki/高级编程语言'><span>高级编程</span></a><span>、</span><a href='https://zh.wikipedia.org/wiki/通用编程语言'><span>通用型编程语言</span></a><span>，由</span><a href='https://zh.wikipedia.org/wiki/吉多·范罗苏姆'><span>吉多·范罗苏姆</span></a><span>创造，第一版发布于1991年。可以视之为一种改良（加入一些其他编程语言的优点，如面向对象）的</span><a href='https://zh.wikipedia.org/wiki/LISP'><span>LISP</span></a><span>。[</span><a href='https://zh.wikipedia.org/wiki/Wikipedia:列明来源'><span>来源请求</span><span>]</span></a><span>Python的设计哲学强调代码的</span><a href='https://zh.wikipedia.org/wiki/可读性'><span>可读性</span></a><span>和简洁的语法（尤其是使用</span><a href='https://zh.wikipedia.org/wiki/越位规则'><span>空格缩进</span></a><span>划分代码块，而非使用大括号或者关键词）。相比于C++或Java，Python让开发者能够用更少的代码表达想法。不管是小型还是大型程序，该语言都试图让程序的结构清晰明了。</span></p><p><span>与</span><a href='https://zh.wikipedia.org/wiki/Scheme'><span>Scheme</span></a><span>、</span><a href='https://zh.wikipedia.org/wiki/Ruby'><span>Ruby</span></a><span>、</span><a href='https://zh.wikipedia.org/wiki/Perl'><span>Perl</span></a><span>、</span><a href='https://zh.wikipedia.org/wiki/Tcl'><span>Tcl</span></a><span>等动态类型编程语言一样，Python拥有</span><a href='https://zh.wikipedia.org/wiki/類型系統'><span>动态类型系统</span></a><span>和</span><a href='https://zh.wikipedia.org/wiki/垃圾回收_(計算機科學)'><span>垃圾回收</span></a><span>功能，能够自动管理内存使用，并且支持多种编程范式，包括面向对象、命令式、函数式和过程式编程。其本身拥有一个巨大而广泛的标准库。</span></p><p><span>Python </span><a href='https://zh.wikipedia.org/wiki/解释器'><span>解释器</span></a><span>本身几乎可以在所有的</span><a href='https://zh.wikipedia.org/wiki/操作系统'><span>操作系统</span></a><span>中运行。Python的其中一个</span><a href='https://zh.wikipedia.org/wiki/直譯器'><span>解释器</span></a><a href='https://zh.wikipedia.org/wiki/CPython'><span>CPython</span></a><span>是用</span><a href='https://zh.wikipedia.org/wiki/C语言'><span>C语言</span></a><span>编写的、是一个由社群驱动的自由</span><a href='https://zh.wikipedia.org/wiki/軟體'><span>软件</span></a><span>，当前由</span><a href='https://zh.wikipedia.org/wiki/Python軟體基金會'><span>Python软件基金会</span></a><span>管理。</span></p></blockquote><h4><a name="部分编程语言基本信息" class="md-header-anchor"></a><span>部分编程语言基本信息</span></h4><figure><table><thead><tr><th>&nbsp;</th><th><span>创始人</span></th><th><span>时间</span></th><th><span>国                 家</span></th><th><span>主要应用</span></th></tr></thead><tbody><tr><td><span>Python</span></td><td><span>Gudio van Rossum</span></td><td><span>1991</span></td><td><span>荷兰</span></td><td><span>大数据的挖掘和处理，开发web，系统运维，云计算，金融理财分析，人工智能等</span></td></tr><tr><td><span>C</span></td><td><span>Dennis MacAlistair  Ritchie</span></td><td><span>1978</span></td><td><span>美国</span></td><td><span>主要用于像操作系统一类偏底层的应用开发，包括像  Windows/Linux 这样的大型商业操作系统，以及嵌入式操作系统、嵌入式设备上的应用</span></td></tr><tr><td><span>C++</span></td><td><span>Bjarne Stroustrup</span></td><td><span>1982</span></td><td><span>美国</span></td><td><span>应用软件，基础软件和高级语言的运行时环境，业务型应用软件的后台</span></td></tr><tr><td><span>C#</span></td><td><span>Anders Hejlsberg</span></td><td><span>1998</span></td><td><span>丹麦</span></td><td><span>多用于开发桌面应用程序、Web应用程序、RIA应用程序（Silverlight），智能手机应用程序</span></td></tr><tr><td><span>Java</span></td><td><span>James Gosling</span></td><td><span>1990</span></td><td><span>加拿大</span></td><td><span>用于开发大中型商业应用，桌面应用，消费和嵌入式领域</span></td></tr><tr><td><span>JavaScript</span></td><td><span>Brendan Eich</span></td><td><span>1995</span></td><td><span>美国</span></td><td><span>唯一一种在所有主流平台都被原生支持的编程语言，因此在所有主流平台都可以用于进行插件开发。常见的有浏览器插件和扩展程序</span></td></tr><tr><td><span>Go</span></td><td><span>Rob Pike,Ken  Thompson,Robert Griesemer</span></td><td><span>2009</span></td><td><span>美国</span></td><td><span>可解决面向对象程序设计的麻烦，帮助程序设计师处理琐碎但重要的内存管理问题</span></td></tr></tbody></table></figure><h4><a name="各大编程语言排名信息" class="md-header-anchor"></a><span>各大编程语言排名信息</span></h4><p><span>排行榜这种东西，总会具有争议性，但总体来说还是具有相当地参考价值。就好比关于国内高校的学术排名历来就有“Top1有两个，Top3有五个，Top5有十个“的梗一样，在IT界也是很容易一言不合就开架的。Anyway，我们就根据TIOBE的排名来看一下各大编程语言的排行情况，对此有意见或感兴趣的可以访问TIOBE官网：</span><a href='https://www.tiobe.com/tiobe-index//'><span>index | TIOBE - The Software Quality Company</span></a><span>以及其它相关网站。</span></p><blockquote><p><span>TIOBE编程社区索引是编程语言受欢迎程度的指标。索引每月更新一次。评级基于全球熟练的工程师，课程和第三方供应商的数量。诸如Google，Bing，Yahoo！，Wikipedia，Amazon，YouTube和Baidu等流行的搜索引擎用于计算评分。重要的是要注意，TIOBE索引与</span><em><span>最佳</span></em><span>编程语言或</span><em><span>大多数代码行</span></em><span>所用的语言无关。</span></p></blockquote><p><span>根据TIOBE 2020年1月份的摘要显示，每个人都认为Python将连续第二年成为TIOBE的年度编程语言。但这一次却是C语言凭借2.4％的年增长率获得了该奖项。为什么C语言仍然很热门？这种趋势背后的主要驱动力是物联网（IoT）和当今发布的大量小型智能设备。当将C应用于对性能至关重要的小型设备时，C会很出色；并且C相对来说还算容易学习，每个处理器都有一个C编译器。以下是目前TIOBE编程社区索引指数对比图。</span></p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118155039173.png" referrerpolicy="no-referrer" alt="image-20200118155039173"></p><p><span>此外，比起趋势图，用表格展示或许更直观一些，且看：</span></p><figure><table><thead><tr><th><span>Programming Language</span></th><th><span>2020</span></th><th><span>2015</span></th><th><span>2010</span></th><th><span>2005</span></th><th><span>2000</span></th><th><span>1995</span></th><th><span>1990</span></th><th><span>1985</span></th></tr></thead><tbody><tr><td><span>Java</span></td><td><strong><span>1</span></strong></td><td><span>2</span></td><td><strong><span>1</span></strong></td><td><span>2</span></td><td><span>3</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>C</span></td><td><span>2</span></td><td><strong><span>1</span></strong></td><td><span>2</span></td><td><strong><span>1</span></strong></td><td><strong><span>1</span></strong></td><td><span>2</span></td><td><strong><span>1</span></strong></td><td><strong><span>1</span></strong></td></tr><tr><td><span>Python</span></td><td><strong><span>3</span></strong></td><td><span>7</span></td><td><span>6</span></td><td><span>6</span></td><td><strong><span>23</span></strong></td><td><span>21</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>C++</span></td><td><span>4</span></td><td><span>4</span></td><td><span>3</span></td><td><span>3</span></td><td><span>2</span></td><td><strong><span>1</span></strong></td><td><span>2</span></td><td><span>12</span></td></tr><tr><td><span>C#</span></td><td><span>5</span></td><td><span>5</span></td><td><span>5</span></td><td><span>8</span></td><td><span>8</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>Visual Basic .NET</span></td><td><span>6</span></td><td><span>10</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>JavaScript</span></td><td><span>7</span></td><td><span>8</span></td><td><span>8</span></td><td><span>9</span></td><td><span>6</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>PHP</span></td><td><span>8</span></td><td><span>6</span></td><td><span>4</span></td><td><span>5</span></td><td><span>29</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>SQL</span></td><td><span>9</span></td><td><span>-</span></td><td><span>-</span></td><td><span>97</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>Objective-C</span></td><td><span>10</span></td><td><span>3</span></td><td><span>22</span></td><td><span>37</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td></tr><tr><td><span>Lisp</span></td><td><span>31</span></td><td><span>18</span></td><td><span>16</span></td><td><span>12</span></td><td><span>14</span></td><td><span>5</span></td><td><span>3</span></td><td><span>2</span></td></tr><tr><td><span>Ada</span></td><td><span>35</span></td><td><span>29</span></td><td><span>25</span></td><td><span>15</span></td><td><span>15</span></td><td><span>6</span></td><td><span>4</span></td><td><span>3</span></td></tr><tr><td><span>Pascal</span></td><td><span>219</span></td><td><span>16</span></td><td><span>13</span></td><td><span>75</span></td><td><span>12</span></td><td><span>3</span></td><td><span>20</span></td><td><span>5</span></td></tr></tbody></table></figure><p><span>整体来看，1895年起C是第一名的位置，十年后C++可能由于STL的原因开始登顶，并开始与C语言并驾其驱。直到2010年JAVA开始后来居上。而Python则默默发力，一举从2000年排名20几直到现在稳居第三。我们可以简单理一下，编程语言的发展经历了机器语言、汇编语言和高级语言的过程，其中C语言是高级语言的集大成者与基石，在那个年代单机控制系统是编程的刚需，所以火热是正常的。后来开始进入了桌面时代，因此C++开始大显身手，并编写出了很多复杂的程序。接着进入了移动互联时代，JAVA因为其一次编译随处运行的特性迅速占领了整个嵌入式市场。而我们现在是什么时代呢？数据时代！对于海量数据的处理需求与人工智能的火热，催生了基于数据与应用的交互需求，因此Python这种脚本语言得以大显身手，并在其发展中不断演化，吸收其他编程语言的优秀思想与设计，实现了阶级跃升。</span></p><p><span>大胆预测一种较大概率存在的模型：底层用C，设备用JAVA，桌面用C++，之间的粘合与原型开发用Python，网页用JavaScript，苹果推自己的Swift，微软推自己的C#，等等。所以从适用性来看，C/C++、JAVA、Python的组合无意是强大的，当然了，背后还有一个语言与它们交互，那就是SQL/NoSQL。这就是我觉得较为稳定、主流的框架了。其他各个领域会有各自的主流语言，比如统计语言R/SAS，人工智能领域Scala/Go等。</span></p><h3><a name="know-more-about-your-operating-system" class="md-header-anchor"></a><span>Know more about your operating system</span></h3><h4><a name="什么是系统调用cmd--bash" class="md-header-anchor"></a><span>什么是系统调用：cmd | bash?</span></h4><p><span>在任何一门操作系统课中，首先接触的、也是贯穿全书的、也是最重要的概念之一就是系统调用（System Call）。为了解释它，让我们首先回到上个世纪五六十年代。</span></p><p><span>大约在20世纪50年代末期，与机器无关的编程语言被首次提出。随后，人们开发了几种实验性质的编译器。第一个编译器是由美国女性计算机科学家</span><a href='https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%E8%91%9B%E9%BA%97%E7%B5%B2%C2%B7%E9%9C%8D%E6%99%AE'><span>葛丽丝·霍普</span></a><span>（Grace Murray Hopper）于1952年为</span><a href='https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/A-0_%E7%B3%BB%E7%B5%B1'><span>A-0 系统</span></a><span>编写的。而到了1960年代早期，商用电脑制造商制造了</span><a href='https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%BB%E5%8A%A1'><span>批处理</span></a><span>系统，此系统可将工作的建置、调度以及运行</span><a href='https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%E5%BA%8F%E5%88%97%E5%8C%96'><span>序列化</span></a><span>。</span></p><p><span>如今，操作系统越来越复杂，图形界面越来越友好，但始终不变的是都会保留一个能直接控制操作系统的命令行入口，在windows内叫Commands Shell（即cmd），在linux/unix（包括mac）内叫Bash Shelle（即bash）。程序员们（尤其是黑客们）便是通过这些入口高效、快速的执行对计算机的操控与管理的，因为这里的命令几乎与操作系统内部的系统调用直接挂钩。</span></p><p><span>而所谓系统调用，便是能够执行一个系统级别的操纵命令，它们一般是一些用于实现各种系统功能的子程序，比如打开一个文件，比如杀死一个进程等。在Linux 2.4.4版内核中，共有221条系统调用命令。在windows中提供了上千个win32的api用以间接调用（或不涉及调用）windows内核中的系统调用。</span></p><p><span>严格意义上，系统调用是操作系统内核中的一些控制语句，而cmd和bash往往是指在操作系统中提供给程序员与系统调用打交道的一些命令语句。以下以windows的cmd为例，简单介绍一些重要的命令。</span></p><h4><a name="windows中的cmd启动" class="md-header-anchor"></a><span>Windows中的cmd启动</span></h4><p><span>按住键盘</span><code>Windows + R</code><span>，即在左下角打开了一个</span><code>运行窗口</code><span>，输入</span><code>cmd</code><span>后便可打开一个黑窗，它有以下特征：</span></p><ol start='' ><li><span>窗口标题即</span><code>cmd.exe</code><span>这个程序的路径</span></li><li><span>窗口中显示的内容中，前几行描述了操作系统的版本信息和版权信息等</span></li><li><span>最后一行的内容，默认是你的用户文件夹位置</span></li></ol><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118201415719.png" referrerpolicy="no-referrer" alt="image-20200118201415719"></p><p><span>这里值得注意的是：</span></p><ol start='' ><li><span>默认的用户文件夹位置其实已经定义在了系统变量中，它的变量名叫</span><code>USERPROFILE</code></li><li><span>这个默认的profile文件夹位置，我们一般不对它做修改，因为与你的用户文件夹初始化有关</span></li><li><span>但CMD打开后，默认显示的位置我们是可以考虑对它做些修改的，为什么呢？因为目前它打开的是我的profile文件夹，如果我在这个黑窗里直接创建一个python程序，那么这个python程序就会和这个文件夹下的内容混在一起了，比如，我们复制该路径，在</span><code>运行窗口</code><span>中输入后回车便得到一个资源管理器窗口：</span></li></ol><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118202203742.png" referrerpolicy="no-referrer" alt="image-20200118202203742"></p><p><span>这个文件夹窗口也有几点值得注意：</span></p><ol start='' ><li><span>可以看到，在我们的用户文件夹下，已经有了很多内容，所以并不适合在黑窗里直接运行一些操作，尤其是和IO（即输入输出文件）相关的操作</span></li><li><span>地址栏自动识别成了我的用户登陆名，实际上在这里也可以输入那个路径，得到的结果是一样的。即在</span><code>Windows + R</code><span>生成的</span><code>运行窗口</code><span>里输入文件夹路径和在</span><code>资源管理器</code><span>的地址栏里输入文件夹路径是一样的，但前者速度更快</span></li><li><span>窗口内的文件夹分三种，第一种是以</span><code>.</code><span>开头的文件夹名（蓝色框），这种文件夹里存储的一般都是一些程序自动生成的配置文件，不要轻易地去修改它，除非你知道自己在做什么；第二种就是正常地文件夹（红色框）；第三种是一些隐藏文件夹（绿色框），一般是存储了一些程序地运行数据，比如备份之类的，严格意义上被自动隐藏的文件夹，是没有任何理由不能动的</span></li><li><span>我们之后会涉及到该窗口内一些文件夹内的一些文件的自定义配置</span></li></ol><h4><a name="windows中的环境变量" class="md-header-anchor"></a><span>Windows中的环境变量</span></h4><p><span>我们有多种方法查看与修改系统中的环境变量，而这个是非常重要的，因为它涉及到很多程序（尤其是指编程程序）的正常运行：</span></p><ol start='' ><li><span>方法一：在cmd中输入</span><code>set</code><span>即可看到环境变量的情况</span></li><li><span>方法二：在资源管理器 - 右击计算机 - 选择属性 - 选择高级系统设置 - 选择环境变量，便能看到上方用户环境变量和下方系统环境变量的情况</span></li></ol><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118205432179.png" referrerpolicy="no-referrer" alt="image-20200118205432179"></p><p><span>在上图中，可以看到cmd显示的一些数据和右方的界面展示的数据大致是一一对应的，不过cmd中给出的环境变量比比右边界面给出的多，比如cmd的第一个变量叫</span><code>ALLUSERPROFILE</code><span>在右边就没有出现（不过没出现的一般我们都不用考虑）；然后左边和右边第一个共有的变量叫</span><code>CLASSPATH</code><span>，这个我们也不用关心；第三个我标红的变量是</span><code>HOMEPATH</code><span>，这其实是我们后续要安装的Anaconda软件默认的一个主页路径；而</span><code>JAVA_HOME</code><span>就是要运行JAVA的主页路径（本教程不考虑）。</span></p><p><span>这张图里最重要的要关心的两个变量是</span><code>NC</code><span>和</span><code>Path</code><span>。</span></p><p><span>首先</span><code>NC</code><span>变量是我自己设置的，为什么自己设置一个变量呢，因为我想让我所有的程序生成的文件都在一个文件夹内，比如在之后我们的章节中，我们既会通过JupyterNotebook创建一些程序文件，也会通过PyCharm创建一些程序文件，而把这些文件分别归到有结构的文件夹内是有益的，比如以下的一种目录，我就比较欣赏：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">C</span>:</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">NC_WORKSPACE</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">Jupyter</span> <span class="cm-variable">Notebook</span> <span class="cm-variable">Projects</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">nb_1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">nb_2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-meta">...</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">PyCharm</span> <span class="cm-variable">Projects</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">pc_1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">pc_2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-meta">...</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">Users</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-variable">WZ988KR</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-meta">...</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-</span> <span class="cm-meta">...</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 307px;"></div><div class="CodeMirror-gutters" style="display: none; height: 307px;"></div></div></div></pre><p><span>因此，你也可以设置以下自己的一个工作区文件夹，以后无论用什么编程语言、用什么编程环境，写的程序都全部归类在这样的一个工作区文件夹下，将是一件非常易于后续维护的事情。</span></p><p><span>但你也许会问，</span><code>NC</code><span>和</span><code>C:\NC_WORKSPACE</code><span>有什么关系呢？其实就是等价关系，毕竟变量名越短越好，那这个变量名我们怎么用呢？还是回到我们的cmd黑窗，输入</span><code>echo %NC%</code><span>，就可以发现，它竟然显示了</span><code>NC</code><span>这个变量所等价的路径。所以</span><code>%xxx%</code><span>便是windows翻译环境变量的一种语法标记。</span></p><p><span>聪明的你应该能意识到了，既然</span><code>NC</code><span>可以转换成其实际含义，那么</span><code>PATH</code><span>也应该可以，于是就有下图。</span></p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118211816569.png" referrerpolicy="no-referrer" alt="image-20200118211816569"></p><p><span>可以看到，确实如此，当我们使用</span><code>echo %PATH%</code><span>之后，它确实显示出了密密麻麻的一堆路径，每条路径都是分号结尾的，注意这个约定，在大多数编程语言中，分号都代表着一句话的终结，比如Python、C语言等。</span></p><p><span>最后你可能会问，那这些路径有什么用呢？答案是大有用处。</span></p><p><span>首先，我随机选择一条路径，比如就最后一条吧，图中最后一条是</span><code>C:\Users\WZ988KR\AppData\Local\GitHubDesktop\bin</code><span>，我先选中后</span><code>Control + C</code><span>复制到剪切板（注意不要带结尾的分号），然后在这个窗口下方输入</span><code>cd</code><span>然后空格再粘贴，其中</span><code>cd</code><span>命令是切换路径的含义，这样窗口的路径就跳转到了该文件夹了。</span></p><p><span>接着我再输入</span><code>echo echo hello &gt; hello.bat</code><span>，这样就在当前文件夹下创建了一个</span><code>hello.bat</code><span>的批处理文件，其中的内容就是</span><code>echo hello</code><span>这一行话，这里我们暂时可以不用理解</span><code>echo</code><span>的机制，只要知道它可以显示文字，而</span><code>&gt;</code><span>可以将文字存入文件就可以了。</span></p><p><span>然后我们就可以测试以下语句，即直接输入</span><code>hello.bat</code><span>，甚至在任意文件夹路径下输入</span><code>hello.bat</code><span>都能得到同样的结果（红色是手动输入的，蓝色是自动输出的结果，右边的cmd是新打开的一个）。</span></p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118215049495.png" referrerpolicy="no-referrer" alt="image-20200118215049495"></p><p><span>原因是因为</span><code>hello.bat</code><span>是在</span><code>C:\Users\WZ988KR\AppData\Local\GitHubDesktop\bin</code><span>这个文件夹下的（不信可以打开资源管理器看看），然后这个</span><code>bin</code><span>的路径又在系统的</span><code>PATH</code><span>变量中，当windows要执行一个没有绝对路径的前缀的程序时，它会依次遍历所有系统环境路径下的文件夹下的可执行文件，主要包括</span><code>.exe</code><span>文件和</span><code>.bat</code><span>文件。</span></p><p><span>如果你在cmd中输入</span><code>hello.bat</code><span>或者输入</span><code>hello</code><span>（可以省略后缀）程序没有相应的输出，甚至报错（比如以下用</span><code>del hello.bat</code><span>先删除</span><code>hello.bat</code><span>文件再执行</span><code>hello</code><span>命令，发现错误），则有几种可能：</span></p><ol start='' ><li><span>你没有正确输入单词，比如输成了</span><code>heLLo</code><span>或者</span><code>hello.baT</code><span>等</span></li><li><span>你的</span><code>hello.bat</code><span>文件不在系统环境路径下，比如你只是在桌面新建了一个</span><code>hello.bat</code><span>文件，但是你的桌面路径并不在系统路径里（当然你可以把你的桌面加入路径，那样就可以正常地、在任何文件夹下运行</span><code>hello</code><span>了）</span></li><li><span>你的</span><code>hello.bat</code><span>文件在系统环境路径内，但是有多个，你可能想执行的是第二个</span><code>hello</code><span>程序，但是却因为路径的先后关系执行了第一个，于是引起了意外的、令人困惑的结果，还很不容易察觉</span></li></ol><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118215606799.png" referrerpolicy="no-referrer" alt="image-20200118215606799"></p><p><span>前两种应该讲的比较清楚了，但针对第三种，有必要展开一下，因为第三种情况是很有可能在实际种发生的。比如，你先在官网下载了一个纯净版Python，并加入了环境路径。之后又下载了Ananconda，并且也把它加入了环境路径，这样问题就来了，当你在cmd中直接输入</span><code>python</code><span>，它会运行哪个呢？比如如下的环境路径情况。</span></p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118220928820.png" referrerpolicy="no-referrer" alt="image-20200118220928820"></p><p>&nbsp;</p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118221016631.png" referrerpolicy="no-referrer" alt="image-20200118221016631"></p><p>&nbsp;</p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118221102719.png" referrerpolicy="no-referrer" alt="image-20200118221102719"></p><p><span>可以看到，确实在两个不同的路径下分别有一个</span><code>python.exe</code><span>程序，根据环境路径的顺序，由于Ananconda在前，所以会运行Anaconda环境下的</span><code>python.exe</code><span>。我们可以通过</span><code>where python</code><span>这个命令去验证一下。</span></p><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/image-20200118221449407.png" referrerpolicy="no-referrer" alt="image-20200118221449407"></p><p><span>如果你的电脑上安装了某个程序的多个版本，那最好的办法是给它们重新命名，比如把</span><code>Python37</code><span>文件夹下的</span><code>python.exe</code><span>重命名为</span><code>python37.exe</code><span>，这样你输入</span><code>pyhton37</code><span>就可以运行该程序，而你输入</span><code>python</code><span>则会运行Anaconda环境下的</span><code>python.exe</code><span>程序。这也是在一个电脑里同时安装</span><code>python2</code><span>和</span><code>python3</code><span>的解决方案，不过好消息（同时更是坏消息）是，今年（2020年）1月1日</span><code>python2</code><span>已经停止维护了。</span></p><h4><a name="mac-os中的环境变量" class="md-header-anchor"></a><span>Mac OS中的环境变量</span></h4><p><span>南川P.F.A教学第一期（上-Mac群）群内交流。</span></p><p>&nbsp;</p><p><span>以上就是本期关于Python以及相关语言、CMD以及环境变量的相关介绍，下期如何安装Python的IDE，我们再见！</span></p><h3><a name="reference-and-recommendation" class="md-header-anchor"></a><span>Reference and Recommendation</span></h3><h4><a name="图灵python图书一览表" class="md-header-anchor"></a><span>图灵Python图书一览表</span></h4><p><img src="http://q45kgq2g9.bkt.clouddn.com/CH01%20-%20The%20Very%20Intro%20to%20Python.assets/20180409200251453.png" referrerpolicy="no-referrer" alt="img"></p><h4><a name="参考网址" class="md-header-anchor"></a><span>参考网址</span></h4><ul><li><a href='https://zh.wikipedia.org/wiki/Python'><span>Python - 维基百科，自由的百科全书</span></a></li><li><a href='https://en.wikipedia.org/wiki/Python_(programming_language)'><span>Python (programming language) - Wikipedia</span></a></li><li><a href='https://www.tiobe.com/tiobe-index//'><span>index | TIOBE - The Software Quality Company</span></a></li><li><a href='https://blog.csdn.net/zhusongziye/article/details/79871738'><span>Python书单，附阅读路线图！_zhusongziye的博客-CSDN博客</span></a></li><li><a href='https://zhuanlan.zhihu.com/p/35516692'><span>17 幅思维导图 | Python 编程之核心知识体系（第三版更新） - 知乎</span></a></li><li><a href='https://sspai.com/post/45534'><span>玩转 Terminal 终端：入门指南及进阶技巧 - 少数派</span></a></li><li><a href='https://www.zhihu.com/question/20474187'><span>请问：是先有操作系统还是先有编译系统？为什么？ - 知乎</span></a></li><li><a href='https://linux.cn/article-10831-1.html'><span>观点|对《大家都在点赞 Windows Terminal，我决定给你泼一盆冷水》一文的商榷</span></a></li><li><a href='https://blog.csdn.net/qq_29166327/article/details/79461748'><span>浅谈CMD和win powershell的区别_qq_29166327的博客-CSDN博客</span></a></li><li><a href='http://www.doc88.com/p-748646126865.html'><span>Linux 中共有多少个系统调用？ 为什么要用系统调用？ - 道客巴巴</span></a></li><li><a href='https://techlog.cn/article/list/10182493'><span>从系统调用看UNIX与windows的差别</span></a></li><li><a href='https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/echo'><span>echo | Microsoft Docs</span></a></li><li></li></ul><h4><a name="书籍导航" class="md-header-anchor"></a><span>书籍导航</span></h4><ul><li><span>最大的免费英文电子书下载网，可下载到许多Python书籍： </span><a href='https://b-ok.cc/s/python'><span>b-ok.cc/s/python</span></a></li><li><span>Python官方的书籍清单网： </span><a href='https://pythonbooks.org/'><span>Find the best Python books - pythonbooks.org</span></a></li><li></li></ul><h4><a name="教程导航" class="md-header-anchor"></a><span>教程导航</span></h4><ul><li><a href='https://www.liaoxuefeng.com/wiki/1016959663602400'><span>Python教程 - 廖雪峰的官方网站</span></a></li><li><a href='https://data-flair.training/blogs/python-tutorial/'><span>Python Tutorial - Learn Python and be above par - DataFlair</span></a></li><li></li></ul><h4><a name="技术手册" class="md-header-anchor"></a><span>技术手册</span></h4><ul><li><a href='https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands'><span>Windows 命令 | Microsoft Docs</span></a></li><li><a href='https://baike.baidu.com/item/CMD%E5%91%BD%E4%BB%A4/9684689?fr=aladdin'><span>CMD命令_百度百科</span></a></li><li><a href='https://support.apple.com/zh-cn/guide/terminal/trmlshtcts/mac'><span>Mac 上“终端”中的键盘快捷键 - Apple 支持</span></a></li><li></li></ul><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

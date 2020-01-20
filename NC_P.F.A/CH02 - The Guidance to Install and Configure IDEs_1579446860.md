@@ -37,9 +37,9 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 下载地址： [Firefox 火狐浏览器 - 全新、安全、快速 | 官方最新下载](http://www.firefox.com.cn/ )
 
-![image-20200119182952414](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119182952414.png)
+![image-20200119182952414](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119182952414.png)
 
-![image-20200119183106943](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119183106943.png)
+![image-20200119183106943](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119183106943.png)
 
 
 
@@ -51,11 +51,11 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 不要下载portable version，除非你能master它。
 
-![image-20200119182139972](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119182139972.png)
+![image-20200119182139972](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119182139972.png)
 
 
 
-![image-20200119182335474](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119182335474.png)
+![image-20200119182335474](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119182335474.png)
 
 
 
@@ -65,31 +65,31 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 下载页面已经提供了Windows版和Mac版的链接，点击即可！
 
-![image-20200119183634341](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119183634341.png)
+![image-20200119183634341](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119183634341.png)
 
 
 
 目前大家的电脑都是64位，所以直接点击下载即可，默认下载的就是462兆的64位安装包。
 
-![image-20200119183743904](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119183743904.png)
+![image-20200119183743904](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119183743904.png)
 
 
 
 注意，在下图，有```Just me```和```All Users```两个选项，其实都可以，现在大家的电脑都是个人自己用，这两者严格意义上没有太大区别，一个明显的区别是安装的位置会不一样。以windows为例，```Just Me```会安装在```UserProfile```文件夹下的深处（具体可参见我们《南川P.F.A教程》第一章关于环境变量的相关内容），而```All Users```会安装在C盘的```ProgramData```文件夹下，即```C:\\ProgramData\Anaconda3```。
 
-![image-20200119191808259](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119191808259.png)
+![image-20200119191808259](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119191808259.png)
 
 如下所示：
 
-![image-20200119192232623](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119192232623.png)
+![image-20200119192232623](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119192232623.png)
 
-![image-20200119192313164](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119192313164.png)
+![image-20200119192313164](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119192313164.png)
 
 友情提醒，如果用的是公司的电脑，建议选择```Just Me```，不然要经常提示输入密码以提高权限。
 
 接下来的选项比较重要，两个都勾选：
 
-![image-20200119192539923](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119192539923.png)
+![image-20200119192539923](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119192539923.png)
 
 如果第一个选项不勾选，就相当于装了一个便携版，这直接导致的结果就是，后续如果我们让你在```cmd```中输入```Jupyter Notebook```你会打不开。
 
@@ -105,7 +105,7 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 为顺利安装与激活，此处要用学生邮箱。学生邮箱注册地址： [JetBrains Products for Learning](https://www.jetbrains.com/shop/eform/students )
 
-![image-20200119184251918](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119184251918.png)
+![image-20200119184251918](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119184251918.png)
 
 
 
@@ -113,11 +113,11 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 
 
-![image-20200119184503258](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119184503258.png)
+![image-20200119184503258](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119184503258.png)
 
 
 
-![image-20200119184532293](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119184532293.png)
+![image-20200119184532293](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119184532293.png)
 
 接下来，你就要**登陆你的教育邮箱进行激活，邮件可能会在垃圾箱内！**。
 
@@ -132,7 +132,7 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 - 左2是在资源管理器中的文件夹上右击时显示一个“在Pycharm中打开文件夹”的选项，这是一个很有用的功能，当我们想深入研究一个Package的时候
 - 左3是将Pycharm与.py类型的文件进行关联，不建议勾选，因为PyCharm的启动速度很慢，它更适合处理工程项目，而非单独查看某个.py的文件内容，我们更推荐使用SubLime、VSCode或IDLE等更轻量级的编辑器去打开.py文件
 
-![image-20200119174726674](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119174726674.png)
+![image-20200119174726674](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119174726674.png)
 
 
 
@@ -143,7 +143,7 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 接着就可以在PyCharm的启动界面内输入自己的注册信息，并得到一个License了，恭喜~！
 
 
-![image-20200119175322724](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119175322724.png)
+![image-20200119175322724](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119175322724.png)
 
 
 
@@ -164,7 +164,7 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 下载地址: [GitHub Desktop | Simple collaboration from your desktop](https://desktop.github.com/ )
 
-![image-20200119185414540](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119185414540.png)
+![image-20200119185414540](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119185414540.png)
 
 这个安装很简单，80兆，顺序安装即可。
 
@@ -186,11 +186,11 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 #### 火狐插件安装
 
-![image-20200119202345970](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119202345970.png)
+![image-20200119202345970](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119202345970.png)
 
 在火狐浏览器的右上角的```菜单```按钮处点击展开，选择```附加组件```进入。
 
-![image-20200119202652117](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119202652117.png)
+![image-20200119202652117](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119202652117.png)
 
 接着，你就来到了一个免费的、工具众多的插件市场，这里，我不会向大家强力推荐什么插件，毕竟每个插件都有其各自的功能，而且还存在替代品，我并不能保证我推给大家的就是最好的插件，一般对于这些够用就行。
 
@@ -198,7 +198,7 @@ Anyway，其实装软件是有固定流程的，也是有方法论的，只要�
 
 #### Sublime Text 3使用介绍与插件安装
 
-![image-20200119203443553](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119203443553.png)
+![image-20200119203443553](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119203443553.png)
 
 Sublime打开是一片黑白的，而且为你自动创建了一个```untitled```文件，但Sublime有一个很有意思的点，无论你有没有输入，你直接叉掉它它就直接关掉了，然后文件呢？自动保存了！等你下次打开，它们都在。这个特性是非常方便的，比如我有时需要速记点东西，于是我会打开windows的记事本，输入后再叉掉，可是它会弹窗问我保不保存，还要花我2秒钟分清一下哪个是不保存键，就这体验我再也很少用记事本了，即使速记它都不配，因为Sublime打开也非常快。
 
@@ -210,11 +210,11 @@ Sublime打开是一片黑白的，而且为你自动创建了一个```untitled``
 
 紧接着，我们再看一个很重要的功能，那就是```Layout```，我们可以很轻松地把一个界面分成两块，不但可以对比不同的文件，还可以对比同一个文件的不同部分，不过要说起对比这种程序员刚需，就不得不推一些```对比插件```了。
 
-![image-20200119212722540](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119212722540.png)
+![image-20200119212722540](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119212722540.png)
 
 按住```Ctrl + Shift + P```打开```Sublime```的快捷窗口，然后找到```Install Package Control```，如果出错请参考这篇文章：[Installation - Package Control](https://packagecontrol.io/installation )
 
-![image-20200119213101727](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119213101727.png)
+![image-20200119213101727](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119213101727.png)
 
 之后你就可以安装很多有用的插件，比如我对Markdown的书写体验很重视，就会下一些Markdown的增强插件。关于Sublime的插件，可以参考这篇文章：[sublime text 3 插件推荐？ - 知乎](https://www.zhihu.com/question/24736400 )
 
@@ -224,47 +224,47 @@ Sublime打开是一片黑白的，而且为你自动创建了一个```untitled``
 
 关于Anaconda，由于组件众多，我实在不能给出一个服众的方案，我只说一下我是怎么用Anaconda的吧，首先，在开始菜单中右击Jupyter Notebook，并选择打开文件位置，跳转到其快捷方式的位置。
 
-![image-20200119214152174](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119214152174.png)
+![image-20200119214152174](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119214152174.png)
 
 
 
 接着，右击其快捷方式，在属性里面设置它的目标位置，把```...anaconda3\python.exe```后面的文字都删掉，改成你想作为你的编程专用文件夹位置，我直接输入了```%NC%```，因为我在《南川P.F.A教程》第一章中已经在环境变量中定义了```NC```这个变量的含义，即我的```C:\\NC_WORKSPACE```文件夹路径，作为我的编程工作起始文件夹。
 
-![image-20200119214343874](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119214343874.png)
+![image-20200119214343874](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119214343874.png)
 
 
 
 之后我还会在它运行之后，将其固定在我的任务栏处，这样我就能随时随地打开它。注意，打开一个Jupyter Notebook，它将首先开启一个黑窗，里面显示着运行过程中的一条条命令。这个目前不用管，严格意义上说，只要程序不出错，永远都可以不用管。不过要注意的是，在这个黑窗之后，你将能看到你的默认浏览器被打开了，因为Jupyter Notebook是基于网页的，在此建议将默认浏览器转为火狐或者谷歌浏览器。不同浏览器，尤其在之后的爬虫区别还是挺大的。
 
-![image-20200119215449096](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119215449096.png)
+![image-20200119215449096](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119215449096.png)
 
 修改默认应用的快捷方法如上，直接在搜索框中输入“默认应用”即可，选择第一个匹配结果。接着再替换默认浏览器为二者之一。
 
-![image-20200119215603105](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119215603105.png)
+![image-20200119215603105](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119215603105.png)
 
 ##### 修改智能提示：取消使用jedi
 
 接下来我们在```cmd```中测试一下```ipython```，输完```print```后按一下```tab```键，看看发生什么。
 
-![image-20200119225029906](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119225029906.png)
+![image-20200119225029906](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119225029906.png)
 
 可以看到这些提示很没啥用，现在看不懂没关系，会改就可以。
 
 于是，这样操作，按```ESC```或 ```Ctrl + D```退出，然后重新输入```ipython profile create```，它就会在你的用户文件夹下生成两份配置文件。复制它的文件夹（非文件）路径到资源管理器中打开，
 
-![image-20200119225239464](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119225239464.png)
+![image-20200119225239464](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119225239464.png)
 
 或者使用 ```cd 文件夹路径```的方式切换到目标文件夹内，然后```start .```打开。
 
-![image-20200119225503009](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119225503009.png)
+![image-20200119225503009](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119225503009.png)
 
 接着，就是**Sublime Text 3**发威的时候了，右键```ipython_config.py```文件，然后选择```使用Sublime打开```（打开是不是特别流畅，并且右下角自动显示```Python```，接着```Ctrl + F```搜索```use_jedi```，定位到第532行附近，把它开头的```#```号去掉，并修改成```False```。然后按```Ctrl + S```保存，随着标题栏的星号一扫而过，文件就修改好了。
 
-![image-20200119225912288](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119225912288.png)
+![image-20200119225912288](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119225912288.png)
 
 接下来重新进入cmd，重新输入```ipython```，重新输入```print(```，并且按```tab```键，看看是否不一样了？
 
-![image-20200119230140052](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119230140052.png)
+![image-20200119230140052](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119230140052.png)
 
 没错，它把属于```print```函数的参数提到前面来了，这正是我们想要的！
 
@@ -280,7 +280,7 @@ By the way，说一下，只有```ipython```以及基于```ipython```的```jupyt
 
 首先给出pip更换清华镜像源的方法，由于以后大多数包我们都是通过```pip install xxx```的形式安装的，所以首先要将pip更换成国内的。方法如下，```Windows + R```打开左下角的run窗口，输入```cmd```打开一个黑色的命令行窗口
 
-![image-20200119220618955](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119220618955.png)
+![image-20200119220618955](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119220618955.png)
 
 接着复制输入如下内容：
 
@@ -295,7 +295,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 这里特别指出，如果你是在公司内网（比如我现在的环境的话），那就有可能连不上pip，所以就要先设置代理。我示范一下我在公司内网升级pip并且配置清华镜像源的操作：
 
-![image-20200119221347894](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119221347894.png)
+![image-20200119221347894](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119221347894.png)
 
 可以看到，需要首先设置```http_proxy```和```https_proxy```的代理，然后再pip升级，```-U```的意思就是```--update```升级的意思，但有经验的人肯定知道我其实升级失败了，并且成功的把```pip```给卸载掉了，理论上我其实要重装```python```了，但为啥下一句加了```--user```就又好了呢？其实没好，你怕自己之前安装的时候可能不规范导致升级没成反而把```pip```卸载掉了，可以直接加```--user```。
 
@@ -327,37 +327,37 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 首先，PyCharm是完完全全的开发工具，因此主要集中在程序的逻辑、组织上，一个好的、大的项目，离不开PyCharm的全程支持，所以会长时间占用你的眼睛，因此UI很重要，在File - Settings - Appearance下可以修改自己的theme，白天调成```Intellij```，晚上调成```Darcula```，还是非常有必要的。
 
-![image-20200119222725331](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119222725331.png)
+![image-20200119222725331](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119222725331.png)
 
 ##### 关于代理
 
  接着，如果你在公司内网，就需要再配一下代理了。
 
-![image-20200119222922845](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119222922845.png)
+![image-20200119222922845](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119222922845.png)
 
 ##### 关于预设脚本模板
 
 紧接着，在编辑器 - 文件与代码模板 - Python 脚本 里可以写入这样的文字，这样你每次新建一个Python文件后它都会自动生成一段预设的自动获取的文件名、时间、作者等信息，这可不止是耍酷，也是专业的一种体现。
 
-![image-20200119223003793](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119223003793.png)
+![image-20200119223003793](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119223003793.png)
 
 ##### 关于编码
 
 在编码这里也要特别注意，可以看到全局设置的是UTF-8语言，然后项目编码是系统默认的GBK中文，可以暂时不用改，当编码有问题的时候可以来看看这边，具体想了解的可以参考一些博客文章。
 
-![image-20200119223344411](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119223344411.png)
+![image-20200119223344411](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119223344411.png)
 
 ##### 关于插件
 
 接下来一个非常重要的菜单项是```Plugin```，你可以找到很多有用的插件，比如专门用于显示MongoDB数据库的```Mongo Plugin```等。
 
-![image-20200119223605687](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119223605687.png)
+![image-20200119223605687](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119223605687.png)
 
 ##### 关于程序编译器：最重要！
 
 接下来的这个就更加关键了，它叫程序编译器，只有正确配置了相关Python程序的位置，你的程序才可以得以运行，比如下图：
 
-![image-20200119223907201](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/image-20200119223907201.png)
+![image-20200119223907201](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/image-20200119223907201.png)
 
 该图显示，我一共有3个不同的版本，其中红框内第二个是原生的python环境，里面只有两个包（猜猜是哪两个），而第一个python是我为开发另一个项目而基于原生python环境单独配置的，第三个大家都知道，它就是Anaconda提供给我们的包，如果你要测试、尝试开发个小东西，那就选择包最多的那个环境就好了，尤其选择Anaconda最舒服，当然了加载也会很慢。但如果你像我一样要发布一个项目，那就要考虑重新建一个效率更高、独立的环境了，这就是唯一的区别。充其量Anaconda也就是提供的包更多一些，管理起来更方便一些（有Anaconda Navigator管理），但在实际运行的时候调用的都是python的包。
 
@@ -367,7 +367,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 GitHub 是目前全球最大的开源代码库，以下是官网的截图：
 
-![image.png](CH02%20-%20The%20Guidance%20to%20Install%20and%20Configure%20IDEs.assets/1579019855091-dacd701d-e7f0-4e72-8cc8-dee504abea77.png)
+![image.png](http://q45kgq2g9.bkt.clouddn.com/CH02-TheGuidancetoInstallandConfigureIDEs.assets/1579019855091-dacd701d-e7f0-4e72-8cc8-dee504abea77.png)
 
 
 可以说，学习编程的第一步和最后一步，都是Github，因为它是连接程序员的桥梁，它是如此重要，以至于你必须把它在浏览器里加个显眼的书签以表明自己无时无刻不在关注程序员世界的最新动态，某种意义上，这也是世界最先进生产力的窗口之一（如果不去计较那些军方的、大学的实验室的话）。

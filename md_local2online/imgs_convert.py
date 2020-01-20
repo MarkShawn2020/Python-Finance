@@ -31,11 +31,12 @@ def img_path_online2local(img_path: str) -> str:
 
 def get_online_img_path(rel_img_href, abs_img_dir_path):
     abs_img_path = os.path.join(abs_img_dir_path, rel_img_href.split("/")[-1])
+    print("Parsing: {}".format(abs_img_path))
     if not os.path.exists(abs_img_path):
         return print("Warning, No img found @ {}".format(abs_img_path))
 
     online_img_path = "/".join(abs_img_path.replace("\\", "/").rsplit("/", 2)[-2:])
-    online_img_path = quote(online_img_path) # 去空格
+    online_img_path = online_img_path.replace(" ", "")
 
     from settings import AK, SK, DOMAIN, BUCKET_NAME
     q = Auth(AK, SK)
@@ -60,7 +61,7 @@ def run_conversion(abs_md_path: str, replace: bool):
         print("Converting img hrefs in the md file...")
 
     abs_img_dir_path = abs_md_path.replace(".md", ".assets")
-    img_dir_to_match = abs_img_dir_path.rsplit("\\", 1)[-1].replace("%B2", "+")
+    img_dir_to_match = quote(abs_img_dir_path.rsplit("\\", 1)[-1]).replace("%B2", "+")
     img_href_to_match = r'(?<=\()%s/.*?(?=\))' % img_dir_to_match
     print("img_href_to_match: " + img_href_to_match)
 
