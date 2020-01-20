@@ -40,7 +40,7 @@
 | 知乎专栏   | 南川P.F.A教程 |
 
 ##### 私人账号
-
-邮箱：shawninjuly@gmail.com
-
-微信：xing123jian123
+|From|@                    |
+| -- | --                  |
+|邮箱|shawninjuly@gmail.com|
+|微信|xing123jian123       |
