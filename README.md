@@ -39,9 +39,17 @@
 | 微信公众号 | 南川笔记      |
 | 知乎专栏   | 南川P.F.A教程 |
 
+<<<<<<< HEAD
 ##### Private
 
 | FROM | ID                    |
 | ---- | --------------------- |
 | 邮箱 | shawninjuly@gmail.com |
 | 微信 | xing123jian123        |
+=======
+##### 私人账号
+|From|@                    |
+| -- | --                  |
+|邮箱|shawninjuly@gmail.com|
+|微信|xing123jian123       |
+>>>>>>> 3b2da7d53f8229da6766dd99e5c6267ded93b05d
