@@ -131,11 +131,8 @@ dmypy.json
 .pyre/
 /projects_common/md_local2online/.idea/
 
-.idea/
-/NC_P.F.A/.ipynb_checkpoints/
 
-t/.idea
-/python37_venv/
-/SECRET.py
-/projects_common/md_local2online/old/
-/t/
+*/.ipynb_checkpoints/
+
+*/.idea
+*/old/

@@ -1,0 +1,114 @@
+0: UserAuthResponse    	1: PageSize            	
+0: UserAuthResponse    	1: Token               	
+0: UserAuthResponse    	1: Uid                 	
+0: UserAuthResponse    	1: Folders             	2: Null                	
+0: UserAuthResponse    	1: Role                	2: Null                	
+0: UserAuthResponse    	1: ResponseCode        	
+0: UserAuthResponse    	1: NickName            	
+0: UserAuthResponse    	1: Tag                 	2: Null                	
+0: UserAuthResponse    	1: Phone               	2: Null                	
+0: UserAuthResponse    	1: WxStatus            	
+0: UserAuthResponse    	1: LandingPage         	
+0: UserAuthResponse    	1: Email               	
+0: UserAuthResponse    	1: Expand              	
+0: UserAuthResponse    	1: ResponseMessage     	
+0: UserAuthResponse    	1: Sort                	
+
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: StockCode           	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: TotalPage           	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: IOSHighlight        	4: Title               	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: SubTitles           	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: PublishDate         	
+0: SearchFilingResponse	1: ResponseCode        	
+0: SearchFilingResponse	1: Token               	
+0: SearchFilingResponse	1: Total               	
+0: SearchFilingResponse	1: HighlightFilters    	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Key                 	
+0: SearchFilingResponse	1: ResponseMessage     	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Pages               	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: ParentIndustry      	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Highlight           	4: Title               	5: string              	
+0: SearchFilingResponse	1: Took                	
+0: SearchFilingResponse	1: Message             	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Title               	
+0: SearchFilingResponse	1: Aggregations        	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Industry            	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: FileType            	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Id                  	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Url                 	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: StockTicker         	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Id                  	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Availability        	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: MarketType          	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Highlight           	4: Content             	5: string              	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Preview             	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: RelevantLaws        	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: EngParagraphs       	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Href                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: NoticeType          	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: UnigramParagraphs   	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: SourcePath          	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Paragraphs          	5: Null                	
+0: SearchFilingResponse	1: Token               	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: IOSHighlight        	4: Content             	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: IsDir               	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Preview             	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Province            	5: Null                	
+
+0: UserAuthResponse    	1: LandingPage         	
+0: UserAuthResponse    	1: Token               	
+0: UserAuthResponse    	1: Phone               	2: Null                	
+0: UserAuthResponse    	1: Expand              	
+0: UserAuthResponse    	1: NickName            	
+0: UserAuthResponse    	1: Tag                 	2: Null                	
+0: UserAuthResponse    	1: ResponseCode        	
+0: UserAuthResponse    	1: Uid                 	
+0: UserAuthResponse    	1: Role                	2: Null                	
+0: UserAuthResponse    	1: ResponseMessage     	
+0: UserAuthResponse    	1: Folders             	2: Null                	
+0: UserAuthResponse    	1: WxStatus            	
+0: UserAuthResponse    	1: Sort                	
+0: UserAuthResponse    	1: Email               	
+0: UserAuthResponse    	1: PageSize            	
+
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: MarketType          	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: EngParagraphs       	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: SourcePath          	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: UnigramParagraphs   	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: SubTitles           	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: RelevantLaws        	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: StockTicker         	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: FileType            	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Paragraphs          	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: StockCode           	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Id                  	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: ParentIndustry      	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: IOSHighlight        	4: Content             	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Url                 	
+0: SearchFilingResponse	1: Total               	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Highlight           	4: Content             	5: string              	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Pages               	5: Null                	
+0: SearchFilingResponse	1: Aggregations        	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: NoticeType          	
+0: SearchFilingResponse	1: Token               	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: IsDir               	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: TotalPage           	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: PublishDate         	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Province            	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Highlight           	4: Title               	5: string              	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Id                  	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Key                 	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Title               	
+0: SearchFilingResponse	1: HighlightFilters    	2: Null                	
+0: SearchFilingResponse	1: Message             	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Industry            	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: IOSHighlight        	4: Title               	5: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Preview             	5: Null                	
+0: SearchFilingResponse	1: Token               	2: Null                	
+0: SearchFilingResponse	1: Took                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Preview             	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Href                	
+0: SearchFilingResponse	1: ResponseMessage     	2: Null                	
+0: SearchFilingResponse	1: Hits                	2: FilingHit           	3: Source              	4: Availability        	
+0: SearchFilingResponse	1: ResponseCode        	
+
