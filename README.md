@@ -1,4 +1,4 @@
-# Daily-Python-Learning
+# Python-Finance by MarkShawn
 > To record and share some financial work based on Python.
 
 ### Project Sctructure
