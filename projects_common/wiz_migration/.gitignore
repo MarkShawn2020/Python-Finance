@@ -1,5 +1,5 @@
-
-
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -39,7 +39,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit t / coverage reports
+# Unit test / coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -129,13 +129,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/projects_common/md_local2online/.idea/
 
-.idea/
-/NC_P.F.A/.ipynb_checkpoints/
-
-t/.idea
-/python37_venv/
-/SECRET.py
-/projects_common/md_local2online/old/
-/t/
+# Settings File
+core/settings.py
+log/cookie.txt
+data/
