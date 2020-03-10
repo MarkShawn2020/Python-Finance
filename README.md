@@ -32,8 +32,7 @@
     ├── files
     ├── jianwei
     └── scrapy.cfg
-
-```                                   |
+```
 
 ### TODO
 - [ ] Markdown文法解析
